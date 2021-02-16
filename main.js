@@ -16,7 +16,7 @@ let rl = Readline.createInterface(process.stdin, process.stdout)
 let WAConnection = simple.WAConnection(_WAConnection)
 
 
-global.owner = ['6281515860089','6288235435804','6281357302007'] // Put your number here
+global.owner = ['6287871537199','994406705745','6281357302007'] // Put your number here
 global.mods = [] // Want some help?
 global.prems = [] // Premium user has unlimited limit
 global.APIs = { // API Prefix
@@ -86,11 +86,11 @@ conn.handler = async function (m) {
       let user
       if (user = global.DATABASE._data.users[m.sender]) {
         if (!isNumber(user.exp)) user.exp = 0
-        if (!isNumber(user.limit)) user.limit = 10
+        if (!isNumber(user.limit)) user.limit = 9999
         if (!isNumber(user.lastclaim)) user.lastclaim = 0
       } else global.DATABASE._data.users[m.sender] = {
         exp: 0,
-        limit: 25,
+        limit: 9999,
         lastclaim: 0,
       }
       
@@ -269,7 +269,7 @@ conn.handler = async function (m) {
     }
   }
 }
-conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\nJika sudah bantu follow kami..\nDi *Instagram:* @arpunchs\nDan Youtube: *Drawl Nag*'
+conn.welcome = 'Hai, @user!\nSelamat datang di grup @subject\n\nJika sudah bantu follow kami..\nDi *Instagram:* @arpunchs\nDan Youtube: *P4LUV1*'
 conn.bye = 'Selamat tinggal @user!'
 conn.onAdd = async function ({ m, participants }) {
   let chat = global.DATABASE._data.chats[m.key.remoteJid]
@@ -362,7 +362,7 @@ global.dfail = (type, m, conn) => {
 
 if (opts['test']) {
   conn.user = {
-    jid: '2219191@s.whatsapp.net',
+    jid: '62I7871537199@s.whatsapp.net',
     name: 'test',
     phone: {}
   }
