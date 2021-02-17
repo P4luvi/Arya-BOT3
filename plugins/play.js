@@ -2,7 +2,7 @@ let fetch = require('node-fetch')
 let limit = 30
 let handler = async function (m, { text, isPrems, isOwner }) {
   if (!text) throw 'Gaada yang dicari :v'
-  let res = await fetch(global.API('xteam', '/dl/play', { lagu: text }, 'APIKEY'))
+  let res = await fetch(global.API('xteam', '/dl/play', { lagu: text }, 'A4wJwkoSak82hj82NWo92'))
   let { judul, size, thumbnail, url } = await res.json()
   let s = Number(size)
   s = /MB/.test(size) ? s * 1024 : s
